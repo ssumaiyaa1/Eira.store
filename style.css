@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --ink: #1C0A2E;
+  --plum: #4A1272;
+  --violet: #7C3AED;
+  --lavender: #C4B5FD;
+  --blush: #FAF5FF;
+  --gold: #D4A853;
+  --warm: #FDF8F0;
+  --white: #fff;
+}
+
+body {
+    background: #1C0A2E;
+    background: linear-gradient(87deg, rgba(28, 10, 46, 1) 36%, rgba(74, 18, 114, 1) 100%);
+    min-height: 100vh;
+}
+/* header start */
+ul{
+   list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* logo */
+.logo a::after{
+    content: "Eira Store";
+    color:var(--plum);
+    position:absolute;
+    top:9%;
+    left:25%;
+    font-size: 1.5rem;
+    font-family:'Playfair Display',serif;  
+}
+.logo img{
+    height: 2.5rem;
+}
+.logo{
+    position: relative;
+    width: 13rem;   
+}
+
+/* navbar */
+#header{
+    background-color:var(--white);
+    position: fixed;
+    width:100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    max-width: 90rem;
+    margin: auto; 
+}
+nav ul{
+    display: flex;
+}
+nav ul a{
+    padding: 0 0.5rem;
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    font-size: 0.9rem;
+    width:max-content;
+    height: max-content;
+    position:relative;
+    margin:0 0.5rem;
+    transition: color 300ms ease;
+    z-index:0;
+}
+nav ul a::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:-0.5rem;
+    left:-0.5rem;
+    z-index:-1;
+    transition: background-color 250ms ease;
+}
+nav ul a:hover::after{
+    background-color:var(--blush);
+    border-radius: 100PX;
+    padding: 0.5rem;
+}
+nav ul a:hover{
+    color:var(--violet);
+}
+
+/* navbar (add to cart, like) */
+nav ul li:nth-child(9) a,
+nav ul li:last-child a{
+    content: '';
+    background-color: var(--plum);
+    border-radius: 100px;
+    color:var(--white);
+    padding: 0.5rem 0.7rem;
+    transition: background-color 300ms ease;
+}
+nav ul li:nth-child(9) a:hover,
+nav ul li:last-child a:hover{
+    background-color: var(--ink);
+    color:rgba(164, 146, 185, 0.866);
+    
+}
+.fa-solid{
+    color:rgba(228, 214, 244, 0.866);
+    transition: color 300ms ease;
+}
+/* header end */
+
+
+
+
+
+
+
+
+
