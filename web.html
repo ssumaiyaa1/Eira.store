@@ -1,153 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Eira Store</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Eira Store</title>
+		<!-- Style -->
+		<link rel="stylesheet" href="style.css">
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="images/favicon/site.webmanifest">
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/d5f0c685f3.js" crossorigin="anonymous"></script>
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+		 
+	</head>
 
-   
-    <link rel="stylesheet" href="web.css">
-</head>
+	<body>
+		<!-- Header start   -->
+		<header id="header">
+			<nav>
+				<div class="logo">
+					<a href="#home">
+						<img src="images/logo.png" alt="Store logo" height="100px">
+					</a>
+				</div>
 
-<body>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#categories">Categories</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#reviews">Reviews</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#favorites"><i class="fa-solid fa-heart fa-lg"></i> Like</a></li>
+					<li><a href="#addToCart"><i class="fa-solid fa-cart-arrow-down fa-lg"></i> Cart</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+		<!-- Header end -->
 
-    
-    <header>
-        <div id="navbar">
-            <div class="logo-title">
-                <img id="logo" src="image\logo1.jpg" alt="Eira Store Logo">
-             
-                <span id="username">Username</span>
-            </div>
+<!-- 
+<header>
+<div id="navbar">
+	<div class="logo-title">
+		<img id="logo" src="images\logo1.jpg" alt="Eira Store Logo">
+		<span id="username">Username</span>
+	</div>
+	<nav>
+		<ul>
+		<li><a href="#">Home</a> </li>
+		<li><a href="#categories">Categories</a> </li>
+		<li><a href="#products">Products</a> </li>
+		<li><a href="#history">History</a></li>
+		</ul>
+	</nav>
+</div>
+</header>
 
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a> </li>
-                    <li><a href="#categories">Categories</a> </li>
-                    <li><a href="#products">Products</a> </li>
-                    <li><a href="#history">History</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<div class="content">
+<h1>Welcome to Eira Store</h1>
+</div>
 
-   
-    <div class="content">
-        <h1>Welcome to Eira Store</h1>
-    </div>
+<section id="categories">
 
-    
-    <section id="categories">
-        <h2>Our Categories</h2>
+<h2>Our Categories</h2>
 
-        <div class="cat-grid">
+<div class="cat-grid">
 
-            <div class="cat-item" onclick="scrollToProducts()">
-                <img src="image\bag.jpg">
-                <h3>Bags</h3>
-            </div>
+	<div class="cat-item" onclick="scrollToProducts()">
+		<img src="images/home-page-img.png">
+		<h3>Bags</h3>
+	</div>
 
-            <div class="cat-item" onclick="scrollToProducts()">
-                <img src="image\accessories.jpg">
-                <h3>Accessories</h3>
-            </div>
+	<div class="cat-item" onclick="scrollToProducts()">
+		<img src="images\accessories.jpg">
+		<h3>Accessories</h3>
+	</div>
 
-            <div class="cat-item" onclick="scrollToProducts()">
-                <img src="image/keychain.jpg">
-                <h3>Keychains</h3>
-            </div>
+	<div class="cat-item" onclick="scrollToProducts()">
+		<img src="images/keychain.jpg">
+		<h3>Keychains</h3>
+	</div>
 
-            <div class="cat-item" onclick="scrollToProducts()">
-                <img src="image\candle.jpg">
-                <h3>Candles</h3>
-            </div>
+		<div class="cat-item" onclick="scrollToProducts()">
+		<img src="images\candle.jpg">
+		<h3>Candles</h3>
 
-        </div>
-    </section>
+	</div>
+</div>
+</section>
 
-   
-    <section id="products">
-        <h2>Products</h2>
 
-        <input type="text" id="searchBox" placeholder="Search products..." onkeyup="searchProducts()">
+<section id="products">
+<h2>Products</h2>
 
-        <div class="product-grid" id="productList">
+<input type="text" id="searchBox" placeholder="Search products..." onkeyup="searchProducts()">
 
-            <div class="product">
-                <img src="image\bag.jpg">
-                <h3>Handmade Bag</h3>
-                <button class="orderBtn" onclick="openForm('Handmade Bag')">Order</button>
-            </div>
+<div class="product-grid" id="productList">
 
-            <div class="product">
-                <img src="image\bracelet.jpg">
-                <h3>Bracelet</h3>
-                <button class="orderBtn" onclick="openForm('Bracelet')">Order</button>
-            </div>
+	<div class="product">
+		<img src="images\bag.jpg">
+		<h3>Handmade Bag</h3>
+		<button class="orderBtn" onclick="openForm('Handmade Bag')">Order</button>
+	</div>
 
-            <div class="product">
-                <img src="image\keychain.jpg">
-                <h3>Cute Keychain</h3>
-                <button class="orderBtn" onclick="openForm('Cute Keychain')">Order</button>
-            </div>
-        </div>
-    </section>
+	<div class="product">
+		<img src="images\bracelet.jpg">
+		<h3>Bracelet</h3>
+		<button class="orderBtn" onclick="openForm('Bracelet')">Order</button>
+	</div>
 
-   
-    <section id="history">
-        <div class="history-container">
-            <h2>Our History</h2>
+	<div class="product">
+		<img src="images\keychain.jpg">
+		<h3>Cute Keychain</h3>
+		<button class="orderBtn" onclick="openForm('Cute Keychain')">Order</button>
+	</div>
+</div>
+</section>
 
-            <img class="history-img" src="image\lightpur.jpg">
 
-            <div class="timeline">
+<section id="history">
+<div class="history-container">
+<h2>Our History</h2>
 
-                <div class="timeline-item">
-                    <h3>2021 – Private Orders</h3>
-                    <p>We started offering custom handcrafted items to close friends and family.</p>
-                </div>
+<img class="history-img" src="images\lightpur.jpg">
 
-                <div class="timeline-item">
-                    <h3>2023 – Online Launch</h3>
-                    <p>Eira Store officially moved online and started serving customers nationwide.</p>
-                </div>
+<div class="timeline">
 
-                <div class="timeline-item">
-                    <h3>2024 – Product Expansion</h3>
-                    <p>We added new categories such as accessories, candles, and customized keychains.</p>
-                </div>
+	<div class="timeline-item">
+		<h3>2021 – Private Orders</h3>
+		<p>We started offering custom handcrafted items to close friends and family.</p>
+	</div>
 
-            </div>
-        </div>
-    </section>
+	<div class="timeline-item">
+		<h3>2023 – Online Launch</h3>
+		<p>Eira Store officially moved online and started serving customers nationwide.</p>
+	</div>
 
-    <!-- form for ordering -->
-    <div id="popupForm">
-        <form id="orderform">
-            <button id="closeBtn" onclick="closeForm()">X</button>
-            <h2 style="color:rgb(74,23,122);">Place Your Order</h2>
+	<div class="timeline-item">
+		<h3>2024 – Product Expansion</h3>
+		<p>We added new categories such as accessories, candles, and customized keychains.</p>
+	</div>
 
-            <label>Your Name:</label>
-            <input type="text">
+</div>
+</div>
+</section>
+-->
+<!-- form for ordering -->
+<!-- <div id="popupForm">
+<form id="orderform">
+<button id="closeBtn" onclick="closeForm()">X</button>
+<h2 style="color:rgb(74,23,122);">Place Your Order</h2>
 
-            <label>Phone Number:</label>
-            <input type="tel">
+<label>Your Name:</label>
+<input type="text">
 
-            <label>Order Name:</label>
-            <input type="text" id="orderName">
+<label>Phone Number:</label>
+<input type="tel">
 
-            <label>Quantity:</label>
-            <input type="number">
+<label>Order Name:</label>
+<input type="text" id="orderName">
 
-            <input type="submit" value="Submit" class="orderBtn">
-        </form>
-    </div>
+<label>Quantity:</label>
+<input type="number">
 
-     <button onclick="document.location='https://www.instagram.com/eira.store/'" id="myBtn" title="Go to instagram">
-        instagram
-    </button>
-    
-    
-    <script src="script.js"></script>
+<input type="submit" value="Submit" class="orderBtn">
+</form>
+</div>
 
-</body>
+<button onclick="document.location='https://www.instagram.com/eira.store/'" id="myBtn" title="Go to instagram">
+instagram
+</button>
+
+
+<script src="script.js"></script> -->
+
+	</body>
 </html>
